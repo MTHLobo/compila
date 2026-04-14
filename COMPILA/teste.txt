@@ -1,0 +1,9 @@
+pacote principal
+
+func principal() {
+    var a int = 0
+    leia(a)
+    se a == 0 entao {
+        escreva("Zero")
+    }
+}

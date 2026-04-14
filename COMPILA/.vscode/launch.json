@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Testar Minha Linguagem",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "${workspaceFolder}/teste.txt",
+            "grammar": "${workspaceFolder}/MinhaLinguagem.g4",
+            "startRule": "programa",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}
