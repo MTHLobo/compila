@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Árvore: Triângulo de Pascal",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "${workspaceFolder}/exemplos/triangulo_pascal.txt",
+            "grammar": "${workspaceFolder}/MinhaLinguagem.g4",
+            "startRule": "programa",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+        {
+            "name": "Árvore: Classifica Triângulos",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "${workspaceFolder}/exemplos/classifica_triangulo.txt",
+            "grammar": "${workspaceFolder}/MinhaLinguagem.g4",
+            "startRule": "programa",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}

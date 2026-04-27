@@ -1,0 +1,28 @@
+pacote principal
+
+func principal() {
+    var a int = 0
+    var b int = 0
+    var c int = 0
+    
+    escreva("Digite o lado A:")
+    leia(a)
+    escreva("Digite o lado B:")
+    leia(b)
+    escreva("Digite o lado C:")
+    leia(c)
+
+    se a <= 0 || b <= 0 || c <= 0 entao {
+        escreva("Medidas invalidas")
+    }
+    
+    se a > 0 && b > 0 && c > 0 entao {
+        se a == b && b == c entao {
+            escreva("Triangulo equilatero")
+        }
+        
+        se a != b && b != c && a != c entao {
+            escreva("Triangulo escaleno")
+        }
+    }
+}

@@ -1,0 +1,29 @@
+pacote principal
+
+func principal() {
+    var n int = 0
+    
+    escreva("Digite o numero de linhas do triangulo (n >= 1):")
+    leia(n)
+
+    se n <= 0 entao {
+        escreva("Erro: n deve ser maior ou igual a 1")
+    }
+
+    se n > 0 entao {
+        var i int = 0
+        
+        enquanto i < n faca {
+            var valor int = 1
+            var j int = 0
+            
+            enquanto j <= i faca {
+                escreva(valor)
+                valor = valor * (i - j) / (j + 1)
+                j = j + 1
+            }
+            
+            i = i + 1
+        }
+    }
+}
