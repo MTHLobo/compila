@@ -1,0 +1,11 @@
+pacote principal
+
+func principal() {
+    var x int = 10
+    var x int = 20
+    escreva(y)
+    var z int = x / 0
+    se "texto" entao {
+        escreva(x)
+    }
+}

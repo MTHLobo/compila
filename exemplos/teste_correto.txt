@@ -1,0 +1,18 @@
+pacote principal
+
+func principal() {
+    var idade int = 20
+    var nome string = "Joao"
+    var resultado int = idade + 5
+    escreva(resultado)
+    escreva(nome)
+    se idade > 18 entao {
+        var maior int = 1
+        escreva(maior)
+    }
+    var i int = 0
+    enquanto i < 3 faca {
+        i = i + 1
+        escreva(i)
+    }
+}

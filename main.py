@@ -1,4 +1,6 @@
 import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from antlr4 import *
 from antlr4.tree.Trees import Trees
 from antlr4.error.ErrorListener import ErrorListener
@@ -65,6 +67,13 @@ def main():
     print("\n--- ÁRVORE SINTÁTICA (Formato LISP) ---")
     print(Trees.toStringTree(tree, None, parser))
     print("\nSUCESSO: Análise Léxica e Sintática concluída sem erros estruturais!")
+
+    # FASE 3: ANÁLISE SEMÂNTICA
+    print("\n--- ANÁLISE SEMÂNTICA ---")
+    from semantico import AnalisadorSemantico
+    semantico = AnalisadorSemantico()
+    semantico.analisar(tree, parser)
+    semantico.exibir_resultado()
 
 if __name__ == '__main__':
     main()
