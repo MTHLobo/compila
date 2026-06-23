@@ -1,0 +1,7 @@
+pacote principal
+
+func principal() {
+    var x int = 10
+    escreva(x)
+    
+// Falta fechar a chave aqui!

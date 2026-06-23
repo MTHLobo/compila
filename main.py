@@ -68,12 +68,27 @@ def main():
     print(Trees.toStringTree(tree, None, parser))
     print("\nSUCESSO: Análise Léxica e Sintática concluída sem erros estruturais!")
 
-    # FASE 3: ANÁLISE SEMÂNTICA
     print("\n--- ANÁLISE SEMÂNTICA ---")
     from semantico import AnalisadorSemantico
     semantico = AnalisadorSemantico()
     semantico.analisar(tree, parser)
     semantico.exibir_resultado()
+
+    print("\n--- TRANSPILADOR (GERAÇÃO DE CÓDIGO) ---")
+    from gerador import GeradorCodigo
+    
+    gerador = GeradorCodigo()
+    codigo_js = gerador.gerar(tree, parser)
+    gerador.exibir_log()
+    
+    # Troca a extensão de .txt para .js
+    arquivo_saida = arquivo_fonte.replace(".txt", ".js")
+    
+    # Salva o arquivo no disco
+    with open(arquivo_saida, "w", encoding="utf-8") as f:
+        f.write(codigo_js)
+        
+    print(f"\nSUCESSO: Arquivo JavaScript '{arquivo_saida}' gerado e salvo com sucesso!")
 
 if __name__ == '__main__':
     main()
